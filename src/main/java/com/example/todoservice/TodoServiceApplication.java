@@ -1,13 +1,20 @@
 package com.example.todoservice;
 
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @SpringBootApplication
-public class TodoServiceApplication {
+@EnableEurekaClient
+public class TodoServiceApplication implements CommandLineRunner {
 
     public static void main(String[] args) {
         SpringApplication.run(TodoServiceApplication.class, args);
     }
 
+    @Override
+    public void run(String... args) throws Exception {
+
+    }
 }
